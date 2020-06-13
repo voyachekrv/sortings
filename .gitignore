@@ -1,0 +1,9 @@
+.idea
+sortings.iml
+/.metadata/
+.classpath
+.project
+ecoforma.eml
+ecoforma.userlibraries
+*.lnk
+*.bat
