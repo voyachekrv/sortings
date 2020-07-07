@@ -12,7 +12,7 @@ import java.awt.*;
  * @author Воячек Роман
  * @version 1.0
  */
-public class TimeTableView extends BaseView {
+public final class TimeTableView extends BaseView {
 
     /**
      * Конструктор - создание нового объекта

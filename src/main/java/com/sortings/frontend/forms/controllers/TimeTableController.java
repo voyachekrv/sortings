@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Воячек Роман
  * @version 1.0
  */
-public class TimeTableController implements FormController {
+public final class TimeTableController implements FormController {
 
     /** Представление */
     private final TimeTableView view;
