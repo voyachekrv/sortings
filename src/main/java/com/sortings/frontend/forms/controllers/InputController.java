@@ -96,7 +96,6 @@ public final class InputController implements FormController {
         int[] ordered = ArrayGenerator.getOrderedArray(min, max, Integer.parseInt(view.spinnerArrayLength.getValue().toString()));
         int[] unordered = ArrayGenerator.getUnorderedArray(min, max, Integer.parseInt(view.spinnerArrayLength.getValue().toString()));
 
-        progressBarForm.closeWindow();
         view.setEnabled(true);
 
         if (bubbleShowingForm != null) {
@@ -109,6 +108,10 @@ public final class InputController implements FormController {
 
         if (timeChartForm != null) {
             timeChartForm.closeWindow();
+        }
+
+        if (timeTableForm != null) {
+            timeTableForm.closeWindow();
         }
 
         timeBubbleOrdered = -1;
@@ -161,6 +164,8 @@ public final class InputController implements FormController {
                     "большого массива"
             );
         }
+
+        progressBarForm.closeWindow();
     }
 
     /**

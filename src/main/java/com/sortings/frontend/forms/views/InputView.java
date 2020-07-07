@@ -40,7 +40,7 @@ public final class InputView extends BaseView {
                 new Rectangle(
                         ((Toolkit.getDefaultToolkit().getScreenSize().width) / 2 - 170),
                         ((Toolkit.getDefaultToolkit().getScreenSize().height) / 3),
-                        420,
+                        432,
                         280),
                 JFrame.EXIT_ON_CLOSE
         );
@@ -107,7 +107,7 @@ public final class InputView extends BaseView {
         );
         add(lWarning);
 
-        btnStart = ComponentFactory.newButton("Начать испытание", new Rectangle(253, 200, 136, 27));
+        btnStart = ComponentFactory.newButton("Начать испытание", new Rectangle(265, 200, 136, 27));
         add(btnStart);
     }
 }

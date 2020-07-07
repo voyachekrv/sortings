@@ -99,4 +99,32 @@ public final class TableModelFactory {
 
         return model;
     }
+
+    /**
+     * Метод - создание табличной модели времени сортировки различных массивов
+     * @param bubbleUnordered - неупорядоченный массив, отсортированный пузырьком
+     * @param bubbleOrdered - упорядоченный массив, отсортированный пузырьком
+     * @param shakerUnordered - неупорядоченный массив, шейкерной сортировкой
+     * @param shakerOrdered - упорядоченный массив, отсортированный шейкерной сортировкой
+     * @return Возвращает модель процесса сортировки массива
+     * */
+    public static DefaultTableModel getTimeTableModel(long bubbleUnordered, long bubbleOrdered, long shakerUnordered, long shakerOrdered) {
+        DefaultTableModel timeTableModel = new DefaultTableModel();
+        timeTableModel.setColumnIdentifiers(new Object[] {
+                "Время / Тип массива и сортировки",
+                "Пузырьком - неупорядоченный м.",
+                "Пузырьком - упорядоченный м.",
+                "Шейкерная - неупорядоченный м.",
+                "Шейкерная - упорядоченный м."
+        });
+
+        timeTableModel.insertRow(0, new Object[] {
+                " ",
+                bubbleUnordered > -1 ? bubbleUnordered : "Не проводилось",
+                bubbleOrdered > -1 ? bubbleOrdered : "Не проводилось",
+                shakerUnordered > -1 ? shakerUnordered : "Не проводилось",
+                shakerOrdered > -1 ? shakerOrdered : "Не проводилось"
+        });
+        return timeTableModel;
+    }
 }

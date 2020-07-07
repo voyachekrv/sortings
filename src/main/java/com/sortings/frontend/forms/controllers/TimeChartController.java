@@ -2,6 +2,9 @@ package com.sortings.frontend.forms.controllers;
 
 import com.sortings.frontend.components.frame.FormController;
 import com.sortings.frontend.forms.views.TimeChartView;
+import com.sortings.frontend.services.TableModelFactory;
+
+import static com.sortings.Application.timeTableForm;
 
 /**
  * Контроллер для формы графика с отображением времени выполнения сортировки
@@ -22,6 +25,9 @@ public final class TimeChartController implements FormController {
      */
     public TimeChartController(long bubbleUnordered, long bubbleOrdered, long shakerUnordered, long shakerOrdered, String arraySize) {
         view = new TimeChartView(bubbleUnordered, bubbleOrdered, shakerUnordered, shakerOrdered, arraySize);
+        timeTableForm = new TimeTableController(TableModelFactory.getTimeTableModel(
+                bubbleUnordered, bubbleOrdered, shakerUnordered, shakerOrdered
+        ), arraySize);
     }
 
     /**

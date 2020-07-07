@@ -1,9 +1,6 @@
 package com.sortings;
 
-import com.sortings.frontend.forms.controllers.ArrayShowingController;
-import com.sortings.frontend.forms.controllers.InputController;
-import com.sortings.frontend.forms.controllers.ProgressBarController;
-import com.sortings.frontend.forms.controllers.TimeChartController;
+import com.sortings.frontend.forms.controllers.*;
 
 import javax.swing.*;
 
@@ -13,6 +10,7 @@ public class Application {
     public static ArrayShowingController bubbleShowingForm;
     public static ArrayShowingController shakerShowingForm;
     public static TimeChartController timeChartForm;
+    public static TimeTableController timeTableForm;
 
     public static void main(String[] args)  {
         try {

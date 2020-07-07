@@ -46,7 +46,7 @@ public final class ArrayGenerator {
     public static int[] getOrderedArray(int min, int max, int length) {
         int[] array = new int[length];
 
-        array[0] = max - randomFromRange(1, min);
+        array[0] = max - randomFromRange(1, 5);
 
         for (int i = 1; i < array.length; i++) {
             array[i] = array[i - 1] - randomFromRange(1, 5);
