@@ -43,6 +43,8 @@ public final class TableModelFactory {
             }
         }
 
+        model.insertRow(model.getRowCount(), objects);
+
         return model;
     }
 
@@ -96,6 +98,8 @@ public final class TableModelFactory {
             left++;
             rowIterator++;
         }
+
+        model.insertRow(model.getRowCount(), objects);
 
         return model;
     }
